@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import Resizephoto from './Components/Resizephoto';
+import Compressor from './Components/Compressor';
+import Cropimage from './Components/Cropimage';
+import Home from './Components/Home';
+import Footer from './Components/Footer';
+import Watermark from './Components/Watermark';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      {/* <Cropimage/> */}
+      <div className='container my-5'>
+     <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/resizephoto" element={<Resizephoto />} />
+        <Route path="/compressor" element={<Compressor />} />
+        <Route path="/cropimage" element={<Cropimage/>} />
+        <Route path="/watermark" element={<Watermark/>} />
+      </Routes>
+     </div>
+     <Footer/>
+    </>
   );
 }
 
