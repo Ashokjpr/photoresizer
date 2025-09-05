@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Compressor() {
-    document.title = "PhotoEase - Compress Image Online Free";
+    document.title = "PhotoEdit - Compress Image Online Free";
 
     const [image, setImage] = useState(null);
     const [compressedImage, setCompressedImage] = useState(null);

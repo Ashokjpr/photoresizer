@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
 function Watermark() {
-  document.title = "PhotoEase - Watermark Image Online Free";
+  document.title = "PhotoEdit - Watermark Image Online Free";
   const [src, setSrc] = useState(null);
   const [watermarks, setWatermarks] = useState([
     { text: "© My Watermark", fontSize: 32, opacity: 0.5, color: "#facd03ff", x: 50, y: 50 },

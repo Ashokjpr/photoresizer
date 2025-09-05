@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Resizephoto() {
-    document.title = "PhotoEase - Resize Image Online Free";
+    document.title = "PhotoEdit - Resize Image Online Free";
 
     const [image, setImage] = useState(null);
     const [preview, setPreview] = useState(null);

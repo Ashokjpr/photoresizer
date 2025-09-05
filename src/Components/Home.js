@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Home() {
-  document.title = "PhotoEase - Free Online Photo Editor & Image Tools";
+  document.title = "PhotoEdit - Free Online Photo Editor & Image Tools";
   return (
     <div className="container py-5">
       <div className="row text-center">
