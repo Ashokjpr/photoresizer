@@ -17,7 +17,7 @@ Features include resizing, compressing, cropping, and adding watermarks to image
 - JavaScript (ES6+)
 
 ## 🌐 Live Demo
-[👉 PhotoEdit App Live](https://photoedit.vercel.app)
+[👉 PhotoEdit App Live](https://photoedit-silk.vercel.app/)
 
 ## 📦 Installation
 Clone the repo and install dependencies:
