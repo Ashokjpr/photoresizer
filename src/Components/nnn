@@ -35,11 +35,11 @@ function Home() {
 
                 <div className="container rounded p-4 shadow-lg hover-border" style={{ width: "16rem" }}>
                   <Link className="text-decoration-none text-dark  " to="/cropimage" title="Crop IMAGE">
-                    <div class="tools__item__icon">
+                    <div className="tools__item__icon">
                               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 100 100" fill-rule="evenodd"><path d="M16.024 0h67.95c5.572 0 7.593.58 9.63 1.67s3.636 2.688 4.725 4.725 1.67 4.058 1.67 9.63v67.95c0 5.572-.58 7.593-1.67 9.63s-2.688 3.636-4.725 4.725-4.058 1.67-9.63 1.67h-67.95c-5.572 0-7.593-.58-9.63-1.67S2.76 95.642 1.67 93.605 0 89.548 0 83.976v-67.95c0-5.572.58-7.593 1.67-9.63S4.358 2.76 6.395 1.67 10.452 0 16.024 0z" fill="#3CB6E2"></path><path d="M44.718 39.818c.563-1.225.882-2.572.882-4.018a9.8 9.8 0 1 0-19.6 0 9.8 9.8 0 0 0 9.8 9.8c1.446 0 2.793-.32 4.018-.882L45.6 50.5l-5.782 5.782c-1.225-.563-2.572-.882-4.018-.882a9.8 9.8 0 1 0 0 19.6 9.8 9.8 0 0 0 9.8-9.8c0-1.446-.32-2.793-.882-4.018L50.5 55.4l17.15 17.15H75V70.1L44.718 39.818zM35.8 40.7a4.9 4.9 0 1 1 0-9.8 4.9 4.9 0 1 1 0 9.8zm0 29.4a4.9 4.9 0 0 1 0-9.8 4.9 4.9 0 1 1 0 9.8zm14.7-18.375a1.21 1.21 0 1 1 0-2.45 1.21 1.21 0 1 1 0 2.45zM67.65 28.45l-14.7 14.7 4.9 4.9L75 30.9v-2.45h-7.35z" fill="#fff"></path></svg>
                           </div>
                     <h3 className='pt-3'>Crop IMAGE</h3>
-                    <div class="tools__item__content">
+                    <div className="tools__item__content">
                               <p>Crop <strong>JPG</strong>, <strong>PNG</strong>, or <strong>GIFs</strong> with ease; Choose pixels to define your rectangle or use our visual editor.</p>
                           </div>
                   </Link>
@@ -47,11 +47,11 @@ function Home() {
 
                 <div className="container rounded p-4 shadow-lg hover-border" style={{ width: "16rem" }}>
                   <Link className="text-decoration-none text-dark  " to="/watermark" title="Watermark IMAGE">
-                    <div class="tools__item__icon">
+                    <div className="tools__item__icon">
                               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M7.692 0h32.616c2.675 0 3.645.278 4.623.801a5.452 5.452 0 0 1 2.268 2.268c.523.978.801 1.948.801 4.623v32.616c0 2.675-.279 3.645-.801 4.623a5.452 5.452 0 0 1-2.268 2.268c-.978.523-1.948.801-4.623.801H7.692c-2.675 0-3.645-.279-4.623-.801A5.452 5.452 0 0 1 .801 44.93C.278 43.953 0 42.983 0 40.308V7.692c0-2.675.278-3.645.801-4.623A5.452 5.452 0 0 1 3.07.801C4.047.278 5.017 0 7.692 0Z" fill="#4A7AAB"></path><path d="M21.797 21.623c0 .825-1.05 2.9-2.024 4.479a.648.648 0 0 0-.076.503.61.61 0 0 0 .586.45h7.435c.23 0 .44-.132.543-.34a.625.625 0 0 0-.055-.647c-1.386-1.891-2.003-3.262-2.003-4.445 0-1.183.617-2.554 2.009-4.455a5.279 5.279 0 0 0 .973-3.066c0-2.9-2.326-5.26-5.185-5.26-2.86 0-5.185 2.36-5.185 5.26 0 1.107.336 2.167.979 3.075 1.385 1.892 2.003 3.263 2.003 4.446ZM35.253 27.916H12.746a.613.613 0 0 0-.608.618v6.207c0 .34.272.617.608.617h22.507a.613.613 0 0 0 .609-.617v-6.207a.613.613 0 0 0-.609-.617ZM31.81 36.263H16.19a.613.613 0 0 0-.609.618v.7c0 .34.273.617.61.617h15.62a.613.613 0 0 0 .608-.617v-.7a.614.614 0 0 0-.609-.618Z" fill="#fff"></path></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h48v48H0z"></path></clipPath></defs></svg>
                           </div>
                     <h3 className='pt-3'>Watermark IMAGE</h3>
-                    <div class="tools__item__content">
+                    <div className="tools__item__content">
                               <p>Stamp an image or text over your images in seconds. Choose the typography, transparency and position.</p>
                           </div>
                   </Link>
