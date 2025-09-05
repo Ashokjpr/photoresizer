@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 function Compressor() {
+    document.title = "PhotoEase - Compress Image Online Free";
+
     const [image, setImage] = useState(null);
     const [compressedImage, setCompressedImage] = useState(null);
     const [quality, setQuality] = useState(0.7); // default compression quality

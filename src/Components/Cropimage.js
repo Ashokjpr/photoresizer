@@ -3,6 +3,7 @@ import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 
 function Cropimage() {
+    document.title = "PhotoEase - Crop Image Online Free";
   const [src, setSrc] = useState(null);
   const [crop, setCrop] = useState({
     unit: "px",

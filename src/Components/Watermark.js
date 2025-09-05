@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 
 function Watermark() {
+  document.title = "PhotoEase - Watermark Image Online Free";
   const [src, setSrc] = useState(null);
   const [watermarks, setWatermarks] = useState([
     { text: "© My Watermark", fontSize: 32, opacity: 0.5, color: "#facd03ff", x: 50, y: 50 },
@@ -8,7 +9,7 @@ function Watermark() {
 
   const imgRef = useRef(null);
   const downloadRef = useRef(null);
-
+  const [fname, setFname] = useState(null);
   // drag state
   const [draggingIndex, setDraggingIndex] = useState(null);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -16,6 +17,7 @@ function Watermark() {
   const onFileChange = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
+    setFname(file.name);
     setSrc(URL.createObjectURL(file));
   };
 
@@ -89,7 +91,7 @@ function Watermark() {
       const url = URL.createObjectURL(blob);
       const a = downloadRef.current;
       a.href = url;
-      a.download = "watermarked.png";
+      a.download = fname;
       a.click();
       URL.revokeObjectURL(url);
     }, "image/png");
@@ -134,7 +136,7 @@ function Watermark() {
                     color: wm.color,
                     opacity: wm.opacity,
                     cursor: "move",
-                    textShadow: "2px 2px 5px rgba(0,0,0,0.6)",
+                    textShadow: "2px 2px 5px rgba(243, 227, 9, 0.6)",
                     userSelect: "none",
                   }}
                   onMouseDown={(e) => handleMouseDown(e, i, wm)}
@@ -147,6 +149,7 @@ function Watermark() {
 
           {/* Controls */}
           <div className="col-md-4">
+            <div className="overflow-auto" style={{ maxHeight: "480px" }}>
             <div className="card p-3 shadow">
               {watermarks.map((wm, i) => (
                 <div key={i} className="border rounded p-2 mb-3">
@@ -235,14 +238,18 @@ function Watermark() {
               <button className="btn btn-success w-100 mb-2" onClick={addWatermark}>
                 ➕ Add Watermark
               </button>
-              <button
-                className="btn btn-primary w-100"
+              
+              <a ref={downloadRef} className="d-none" />
+            </div>
+            </div>
+            <div className="container text-center m-1 p-2 ">
+                <button
+                className="btn btn-primary  fw-bold w-95"
                 onClick={handleDownload}
               >
                 <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M7.692 0h32.616c2.675 0 3.645.278 4.623.801a5.452 5.452 0 0 1 2.268 2.268c.523.978.801 1.948.801 4.623v32.616c0 2.675-.279 3.645-.801 4.623a5.452 5.452 0 0 1-2.268 2.268c-.978.523-1.948.801-4.623.801H7.692c-2.675 0-3.645-.279-4.623-.801A5.452 5.452 0 0 1 .801 44.93C.278 43.953 0 42.983 0 40.308V7.692c0-2.675.278-3.645.801-4.623A5.452 5.452 0 0 1 3.07.801C4.047.278 5.017 0 7.692 0Z" fill="#4A7AAB"></path><path d="M21.797 21.623c0 .825-1.05 2.9-2.024 4.479a.648.648 0 0 0-.076.503.61.61 0 0 0 .586.45h7.435c.23 0 .44-.132.543-.34a.625.625 0 0 0-.055-.647c-1.386-1.891-2.003-3.262-2.003-4.445 0-1.183.617-2.554 2.009-4.455a5.279 5.279 0 0 0 .973-3.066c0-2.9-2.326-5.26-5.185-5.26-2.86 0-5.185 2.36-5.185 5.26 0 1.107.336 2.167.979 3.075 1.385 1.892 2.003 3.263 2.003 4.446ZM35.253 27.916H12.746a.613.613 0 0 0-.608.618v6.207c0 .34.272.617.608.617h22.507a.613.613 0 0 0 .609-.617v-6.207a.613.613 0 0 0-.609-.617ZM31.81 36.263H16.19a.613.613 0 0 0-.609.618v.7c0 .34.273.617.61.617h15.62a.613.613 0 0 0 .608-.617v-.7a.614.614 0 0 0-.609-.618Z" fill="#fff"></path></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h48v48H0z"></path></clipPath></defs></svg>
                 Download image
               </button>
-              <a ref={downloadRef} className="d-none" />
             </div>
           </div>
         </div>
